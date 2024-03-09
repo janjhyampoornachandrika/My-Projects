@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1{
+            height: 500px;
+            width: 70%;
+            margin: auto;
+            padding-bottom: 5px;
+            text-align: center;
+            border-radius: 15px;
+            color: white;
+        }
+        input{
+            border-radius: 6px;
+            height: 26px;
+            width: 190px;
+        }
+        button {
+            height: 50px;
+            width: 300px;
+            border-radius: 5px;
+            color:white;
+            border-color: black;
+            background-color:rgb(236, 102, 102) ;
+        }
+        input{
+            height:50px;
+            width: 300px;
+        }
+        body{
+            background-image: url(download.jpg);
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+        <hr style="color: white;">
+        <div id="div1">
+            <h1 style="color: white;">SIGN UP</h1><br><br>
+            <input type="email" placeholder="Enter Your Email" id="e" required><br><br>
+            <input type="password" placeholder="Enter Your Password" id="p" required><br><br><br>
+            <button onclick="f1()">CREATE AN ACCOUNT</button><br><br>
+            <p style="font-size: x-large; color: white;">Already Existing User ?</p><br>
+            <p><button onclick="f2()">LOGIN</button></p>
+        </div>
+    
+    </div>
+    <script>
+        let save=[]
+        const f1=()=>{
+            email=e.value
+            password=p.value
+            alert("CREATED THE ACCOUNT")
+        }
+        const f2=()=>{
+            div1.innerHTML=""
+            str=""
+            str+=`<h1 style="padding-top: 10px;">LOGIN</h1><br><br>
+            <input type="email" placeholder="Enter Your Email" id="g" required><br><br>
+            <input type="password" placeholder="Enter Your Password" id="p2" required><br><br><br>
+            <button onclick="f3()">LOGIN</button>`
+            div1.innerHTML=str
+        }
+        const f3=()=>{
+            if(email==g.value && password==p2.value) {
+                alert("LOGGED IN SUCCESSFUL")
+            }else{
+                alert("INVALID CREDENTIALS")
+            }
+        }
+
+        
+    </script>
+</body>
+</html>
